@@ -6,13 +6,13 @@ export default function Home() {
     <div className={styles.container}>
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome to <a href="https://thirdweb.com/">thirdweb</a>!
+          Welcome to NFTE staking rewards!
         </h1>
 
         <p className={styles.description}>
-          Get started by configuring your desired network in{" "}
-          <code className={styles.code}>pages/_app.js</code>, then modify the{" "}
-          <code className={styles.code}>pages/index.js</code> file!
+          Stake your $NFTE tokens and earn $ARB rewards. 
+          Staking contract address on Arbitrum: 0xaa9d9a8f810463f24825c05f3075c1fc6a430430
+      
         </p>
 
         <div className={styles.connect}>
@@ -20,29 +20,27 @@ export default function Home() {
         </div>
 
         <div className={styles.grid}>
-          <a href="https://portal.thirdweb.com/" className={styles.card}>
-            <h2>Portal &rarr;</h2>
+          <a href="https://arbiscan.io/address/0xaa9d9a8f810463f24825c05f3075c1fc6a430430#code" className={styles.card}>
+            <h2>View on Arbiscan &rarr;</h2>
             <p>
-              Guides, references and resources that will help you build with
-              thirdweb.
+              Review the token staking contract on the Arbitrum block explorer.
             </p>
           </a>
 
-          <a href="https://thirdweb.com/dashboard" className={styles.card}>
-            <h2>Dashboard &rarr;</h2>
+          <a href="https://nftearth.exchange" className={styles.card}>
+            <h2>Marketplace &rarr;</h2>
             <p>
-              Deploy, configure and manage your smart contracts from the
-              dashboard.
+              Trade NFTs on L2.
             </p>
           </a>
 
           <a
-            href="https://portal.thirdweb.com/templates"
+            href="https://docs.nftearth.exchange"
             className={styles.card}
           >
-            <h2>Templates &rarr;</h2>
+            <h2>Docs &rarr;</h2>
             <p>
-              Discover and clone template projects showcasing thirdweb features.
+              Docs
             </p>
           </a>
         </div>

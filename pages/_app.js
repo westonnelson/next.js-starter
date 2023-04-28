@@ -1,17 +1,12 @@
-import { ThirdwebProvider } from "@thirdweb-dev/react";
-import "../styles/globals.css";
+import { ThirdwebSDK } from "@thirdweb-dev/sdk/evm";
 
-// This is the chain your dApp will work on.
-// Change this to the chain your app is built for.
-// You can also import additional chains from `@thirdweb-dev/chains` and pass them directly.
-const activeChain = "ethereum";
+const sdk = new ThirdwebSDK("arbitrum");
+const contract = await sdk.getContract("0xaA9D9a8f810463f24825c05f3075c1Fc6a430430");
 
-function MyApp({ Component, pageProps }) {
-  return (
-    <ThirdwebProvider activeChain={activeChain}>
-      <Component {...pageProps} />
-    </ThirdwebProvider>
-  );
-}
+const appURI = await contract.appURI.get(appURI);
+console.log(appURI) // "ipfs://some_ipfs_hash";
 
-export default MyApp;
+const metadata = await contract.metadata.get();
+console.log(metadata);
+
+const rolesAndMembers = await contract.roles.getAll();
